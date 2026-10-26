@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171915">
+  <title>Free Wall Molding Configurator | Trim Wall Haus</title>
+  <meta name="description" content="Plan picture frame molding, board and batten, accent wall grids and wainscoting. Get spacing, a cut list and live Trim Wall Haus product pricing.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="https://trimwallhaus.com/?utm_source=calculator&utm_medium=tool&utm_campaign=wall-configurator" target="_blank" rel="noopener">
+      <span class="brand-mark" aria-hidden="true">T</span>
+      <span>Trim Wall Haus</span>
+    </a>
+    <div class="header-actions">
+      <div class="unit-switch" role="group" aria-label="Measurement unit">
+        <button type="button" data-unit="in" aria-pressed="true">in</button>
+        <button type="button" data-unit="cm" aria-pressed="false">cm</button>
+      </div>
+      <a class="header-link" href="https://trimwallhaus.com/collections/wall-moulding-kits?utm_source=calculator&utm_medium=tool&utm_campaign=wall-configurator" target="_blank" rel="noopener">Shop kits</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Free design tool</p>
+      <h1>Plan the wall. See the spacing. Know what to order.</h1>
+      <p class="hero-copy">Choose a molding style, enter your wall size and get a balanced layout, material estimate and cut list in seconds.</p>
+    </section>
+
+    <section class="mode-section" aria-labelledby="style-heading">
+      <div class="section-heading">
+        <div><span class="step">1</span><h2 id="style-heading">Choose your wall style</h2></div>
+        <p>Change styles without losing your saved projects.</p>
+      </div>
+      <div class="mode-grid" id="mode-grid"></div>
+    </section>
+
+    <section class="workspace" aria-labelledby="measure-heading">
+      <aside class="control-panel">
+        <div class="panel-title"><span class="step">2</span><div><h2 id="measure-heading">Enter measurements</h2><p id="mode-description"></p></div></div>
+        <form id="measurement-form" novalidate>
+          <div class="field-grid" id="field-grid"></div>
+          <div class="form-error" id="form-error" role="alert" hidden></div>
+        </form>
+        <div class="control-actions">
+          <button class="button button-secondary" id="save-project" type="button">Save measurements</button>
+          <button class="button button-ghost" id="reset-project" type="button">Reset</button>
+        </div>
+        <p class="save-status" id="save-status" aria-live="polite"></p>
+      </aside>
+
+      <div class="preview-panel">
+        <div class="preview-heading">
+          <div><span class="step">3</span><h2>Your wall preview</h2></div>
+          <span class="live-badge"><span></span> Live layout</span>
+        </div>
+        <div class="wall-stage" id="wall-stage" aria-live="polite"></div>
+        <p class="preview-note">Proportional planning preview. Confirm every measurement on the wall before ordering.</p>
+
+        <div class="metrics" id="metrics"></div>
+      </div>
+    </section>
+
+    <section class="output-grid">
+      <article class="output-card cut-card">
+        <div class="card-heading"><div><p class="eyebrow">Build plan</p><h2>Cut list</h2></div><button class="text-button" id="print-plan" type="button">Print or save PDF</button></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Piece</th><th>Qty</th><th>Length each</th></tr></thead>
+            <tbody id="cut-list"></tbody>
+          </table>
+        </div>
+        <div class="material-total" id="material-total"></div>
+      </article>
+
+      <article class="output-card price-card">
+        <p class="eyebrow">Live store match</p>
+        <h2 id="price-heading">Checking Trim Wall Haus pricing...</h2>
+        <p id="price-detail">Prices are read from the live store. We never invent unavailable prices.</p>
+        <a class="button button-primary" id="shop-button" href="https://trimwallhaus.com/collections/wall-moulding-kits" target="_blank" rel="noopener">Shop this layout</a>
+        <button class="button button-secondary full" id="email-plan-button" type="button">Email my plan + request $10 off</button>
+        <ul class="trust-list"><li>Free shipping to US, CA, UK, IE and EU</li><li>Pre-cut and ready to install</li><li>Free architectural drawing support</li></ul>
+      </article>
+    </section>
+
+    <section class="lead-panel" id="lead-panel" hidden>
+      <div class="lead-copy"><p class="eyebrow">Free plan review</p><h2>Send this layout to Trim Wall Haus</h2><p>Your measurements, cut list and note will be included. Add a photo later when the photo tool is released.</p></div>
+      <form id="lead-form" action="https://trimwallhaus.com/contact#ContactForm" method="post" target="_blank">
+        <input type="hidden" name="form_type" value="contact">
+        <input type="hidden" name="utf8" value="✓">
+        <input type="hidden" id="lead-message" name="contact[Comment]" value="">
+        <label>Full name<input name="contact[Name]" autocomplete="name" required></label>
+        <label>Email address<input name="contact[email]" type="email" autocomplete="email" required></label>
+        <label class="wide">Project notes<textarea name="projectNotes" rows="4" placeholder="Tell us about doors, windows, outlets, furniture or the look you want."></textarea></label>
+        <label class="honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <label class="consent wide"><input name="marketingConsent" type="checkbox"> Send me offers and design tips. Required for promotional emails in regions where consent applies.</label>
+        <div class="wide lead-actions"><button class="button button-primary" type="submit">Send my free design request</button><button class="button button-ghost" id="close-lead" type="button">Cancel</button></div>
+        <p class="wide lead-status" id="lead-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><p>Trim Wall Haus calculator results are estimates. Measure the actual wall and verify obstructions before ordering.</p></footer>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

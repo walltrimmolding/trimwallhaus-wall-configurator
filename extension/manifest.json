@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Trim Wall Haus Wall Configurator",
+  "version": "1.0.0",
+  "description": "Plan picture frame molding, board and batten, accent wall grids and wainscoting with cut lists and live pricing.",
+  "action": {
+    "default_title": "Open Trim Wall Haus Configurator"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "host_permissions": [
+    "https://trimwallhaus.com/*"
+  ]
+}
