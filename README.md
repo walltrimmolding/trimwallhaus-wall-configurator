@@ -10,10 +10,12 @@ Browse pre-cut molding kits and installation-ready wall designs at **[Trim Wall 
 
 ## Included calculators
 
-- Picture Frame Molding
-- Board and Batten
-- Accent Wall Grid
-- Wainscoting
+- **[Picture Frame Molding Kits](https://trimwallhaus.com/collections/picture-frame-molding-kits)** — calculate balanced decorative wall frames, panel dimensions, mitre cuts, and material requirements.
+- **[Board and Batten Wall Kits](https://trimwallhaus.com/collections/board-and-batten-kits)** — calculate batten spacing, panel count, top rail length, and matching kit sizes.
+- **[Accent Wall Kits](https://trimwallhaus.com/collections/accent-wall-kits)** — plan full-height square and rectangular grid accent walls with an instant cut list.
+- **[Wainscoting Wall Molding Kits](https://trimwallhaus.com/collections/premium-wainscoting-wall-molding-kits)** — calculate lower-wall panel proportions, chair rail length, and recommended wainscoting height.
+
+These calculators help homeowners and installers plan wall molding projects before ordering pre-cut kits from [Trim Wall Haus](https://trimwallhaus.com/collections/wall-moulding-kits).
 
 ## Features
 
