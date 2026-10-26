@@ -17,6 +17,21 @@ Browse pre-cut molding kits and installation-ready wall designs at **[Trim Wall 
 
 These calculators help homeowners and installers plan wall molding projects before ordering pre-cut kits from [Trim Wall Haus](https://trimwallhaus.com/collections/wall-moulding-kits).
 
+## Browse Trim Wall Haus collections
+
+- [Accent Wall Molding Kits](https://trimwallhaus.com/collections/accent-wall-kits)
+- [Arched Wall Molding Kits](https://trimwallhaus.com/collections/arched-wall-molding-kits)
+- [Board and Batten Wall Kits](https://trimwallhaus.com/collections/board-and-batten-kits)
+- [Chair Rail Molding](https://trimwallhaus.com/collections/chair-rail-moulding)
+- [Decorative Wall Molding Kits](https://trimwallhaus.com/collections/decorative-wall-molding-kits)
+- [Half Wall Paneling Kits](https://trimwallhaus.com/collections/half-wall-paneling-kits)
+- [MDF Wall Paneling Kits](https://trimwallhaus.com/collections/mdf-panelling-kits)
+- [Peel and Stick Wall Molding Kits](https://trimwallhaus.com/collections/peel-and-stick-moldings-kit)
+- [Picture Frame Molding Kits](https://trimwallhaus.com/collections/picture-frame-molding-kits)
+- [Shaker Wall Paneling Kits](https://trimwallhaus.com/collections/shaker-panelling-kits)
+- [Trim Wall Molding Kits](https://trimwallhaus.com/collections/wall-moulding-kits)
+- [Wainscoting Kits](https://trimwallhaus.com/collections/premium-wainscoting-wall-molding-kits)
+
 ## Features
 
 - Proportional SVG wall preview
