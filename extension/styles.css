@@ -127,10 +127,25 @@ th:last-child, td:last-child { text-align: right; }
 .lead-status { min-height: 18px; margin: 0; color: #d5c194; font-size: 12px; }
 
 footer { padding: 28px 20px 50px; color: var(--muted); text-align: center; font-size: 12px; }
+footer a { color: inherit; text-underline-offset: 3px; }
+
+.collection-section { margin: 20px 0 38px; }
+.collection-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.collection-grid a { display: grid; gap: 6px; min-height: 104px; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); color: var(--ink); text-decoration: none; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.collection-grid a:hover, .collection-grid a:focus-visible { transform: translateY(-2px); border-color: var(--green); box-shadow: 0 10px 24px rgba(28, 43, 34, .08); outline: none; }
+.collection-grid strong { font-size: 14px; }
+.collection-grid span { color: var(--muted); font-size: 12px; line-height: 1.45; }
+
+.policy-page { max-width: 800px; margin: 0 auto; padding: 72px 5vw; }
+.policy-page h1 { margin: 0 0 24px; font-family: var(--serif); font-size: clamp(42px, 7vw, 74px); line-height: .96; }
+.policy-page h2 { margin-top: 38px; font-family: var(--serif); font-size: 26px; }
+.policy-page p, .policy-page li { color: var(--muted); line-height: 1.75; }
+.policy-page a { color: var(--green); }
 
 @media (max-width: 900px) {
   .mode-grid { grid-template-columns: repeat(2, 1fr); }
   .workspace, .output-grid, .lead-panel { grid-template-columns: 1fr; }
+  .collection-grid { grid-template-columns: 1fr 1fr; }
   .control-panel { border-right: 0; border-bottom: 1px solid var(--line); }
   .wall-stage { min-height: 320px; }
 }
@@ -157,6 +172,7 @@ footer { padding: 28px 20px 50px; color: var(--muted); text-align: center; font-
   .lead-panel form { grid-template-columns: 1fr; }
   .wide { grid-column: auto; }
   .lead-actions { flex-direction: column; }
+  .collection-grid { grid-template-columns: 1fr; }
 }
 
 @media print {
