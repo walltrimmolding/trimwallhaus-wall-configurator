@@ -85,10 +85,21 @@ This extension calculates and displays wall molding layouts, spacing, material e
 
 ## Visual asset checklist
 
-- 128 × 128 store icon — required and included in the ZIP
-- Five 1280 × 800 screenshots — prepare from the real interface
-- 440 × 280 small promotional tile — required by current Chrome guidance
-- 1400 × 560 marquee image — optional but recommended
+- 128 × 128 store icon — included in the extension ZIP and store-assets folder
+- Five 1280 × 800 screenshots — captured from the live calculator
+- 440 × 280 small promotional tile — included
+- 1400 × 560 marquee image — included
+
+Prepared filenames:
+
+- `icon-128.png`
+- `01-picture-frame-calculator.png`
+- `02-board-and-batten-calculator.png`
+- `03-accent-wall-grid-calculator.png`
+- `04-wainscoting-calculator.png`
+- `05-cut-list-live-pricing.png`
+- `small-promo-440x280.png`
+- `marquee-1400x560.png`
 
 ## Anti-stuffing checks
 
