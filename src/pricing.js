@@ -33,13 +33,14 @@ export function discountForPrice(price) {
   return Number(price) >= 350 ? 'WALL20' : null;
 }
 
-export function buildShopUrl({ collection, campaign, source = 'calculator', code = null }) {
+export function buildShopUrl({ collection, product, campaign, source = 'calculator', code = null }) {
   const params = new URLSearchParams({
     utm_source: source,
     utm_medium: 'tool',
     utm_campaign: campaign,
   });
-  const redirect = `/collections/${collection}?${params.toString()}`;
+  const destination = product ? `/products/${product}` : `/collections/${collection}`;
+  const redirect = `${destination}?${params.toString()}`;
   return code
     ? `${SITE}/discount/${encodeURIComponent(code)}?redirect=${encodeURIComponent(redirect)}`
     : `${SITE}${redirect}`;

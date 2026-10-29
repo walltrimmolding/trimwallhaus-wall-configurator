@@ -23,6 +23,15 @@ test('renders one rectangle per picture frame', async () => {
   assert.equal((svg?.match(/data-piece="frame"/g) || []).length, 3);
 });
 
+test('renders French panels with outer, inner and four stepped L corners', async () => {
+  const { renderWallSvg } = await load();
+  const svg = renderWallSvg?.({ type: 'french-step-corner', wallWidth: 120, wallHeight: 84, panels: 3, outerWidth: 33.333, outerHeight: 72, innerWidth: 25.459, innerHeight: 64.126, sideMargin: 6, gap: 4, topMargin: 6, stepSize: 3.937, cuts: [] });
+  assert.equal((svg?.match(/data-piece="french-outer"/g) || []).length, 3);
+  assert.equal((svg?.match(/data-piece="french-inner"/g) || []).length, 3);
+  assert.equal((svg?.match(/data-piece="french-step"/g) || []).length, 12);
+  assert.doesNotMatch(svg || '', /NaN|undefined/);
+});
+
 test('renders accent grid and wainscoting without invalid coordinates', async () => {
   const { renderWallSvg } = await load();
   const grid = renderWallSvg?.({ type: 'accent-grid', wallWidth: 120, wallHeight: 96, battenWidth: 2, columns: 4, rows: 3, cuts: [] });

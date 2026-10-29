@@ -9,9 +9,28 @@ async function load() {
   }
 }
 
-test('exposes the four approved wall design modes', async () => {
+test('exposes French step-corner as a dedicated fifth wall design mode', async () => {
   const { MODES } = await load();
-  assert.deepEqual(Object.keys(MODES || {}), ['picture-frame', 'board-batten', 'accent-grid', 'wainscoting']);
+  assert.deepEqual(Object.keys(MODES || {}), ['picture-frame', 'french-step-corner', 'board-batten', 'accent-grid', 'wainscoting']);
+});
+
+test('routes French step-corner centimetre measurements through its calculator', async () => {
+  const { calculateDesign } = await load();
+  const result = calculateDesign?.('french-step-corner', {
+    wallWidth: 304.8,
+    regionHeight: 213.36,
+    panels: 3,
+    sideMargin: 15.24,
+    gap: 10.16,
+    topMargin: 15.24,
+    bottomMargin: 15.24,
+    stepSize: 10,
+    wastePercent: 10,
+    stockLength: 243.84,
+  }, 'cm');
+  assert.equal(result?.type, 'french-step-corner');
+  assert.equal(result?.panels, 3);
+  assert.equal(result?.stepSize, 3.937);
 });
 
 test('routes board and batten values through unit conversion and its calculator', async () => {

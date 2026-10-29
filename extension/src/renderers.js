@@ -33,6 +33,24 @@ function pictureFrame(result) {
   return svgShell(result, frames.join('\n'));
 }
 
+function frenchStepCorner(result) {
+  const panels = [];
+  for (let index = 0; index < result.panels; index += 1) {
+    const x = result.sideMargin + index * (result.outerWidth + result.gap);
+    const y = result.topMargin;
+    const right = x + result.outerWidth;
+    const bottom = y + result.outerHeight;
+    const step = result.stepSize;
+    panels.push(`<rect data-piece="french-outer" class="svg-frame" x="${f(x)}" y="${f(y)}" width="${f(result.outerWidth)}" height="${f(result.outerHeight)}" rx="0.8" />`);
+    panels.push(`<rect data-piece="french-inner" class="svg-frame svg-frame-inner" x="${f(x + step)}" y="${f(y + step)}" width="${f(result.innerWidth)}" height="${f(result.innerHeight)}" rx="0.6" />`);
+    panels.push(`<path data-piece="french-step" class="svg-frame" d="M ${f(x)} ${f(y + step)} H ${f(x + step)} V ${f(y)}" />`);
+    panels.push(`<path data-piece="french-step" class="svg-frame" d="M ${f(right - step)} ${f(y)} V ${f(y + step)} H ${f(right)}" />`);
+    panels.push(`<path data-piece="french-step" class="svg-frame" d="M ${f(right)} ${f(bottom - step)} H ${f(right - step)} V ${f(bottom)}" />`);
+    panels.push(`<path data-piece="french-step" class="svg-frame" d="M ${f(x + step)} ${f(bottom)} V ${f(bottom - step)} H ${f(x)}" />`);
+  }
+  return svgShell(result, panels.join('\n'));
+}
+
 function accentGrid(result) {
   const pieces = [];
   const xStep = (result.wallWidth - result.battenWidth) / result.columns;
@@ -66,6 +84,7 @@ export function renderWallSvg(result) {
   if (!result || !result.type) throw new TypeError('A calculation result is required.');
   if (result.type === 'board-batten') return boardBatten(result);
   if (result.type === 'picture-frame') return pictureFrame(result);
+  if (result.type === 'french-step-corner') return frenchStepCorner(result);
   if (result.type === 'accent-grid') return accentGrid(result);
   if (result.type === 'wainscoting') return wainscoting(result);
   throw new RangeError(`Unsupported design type: ${result.type}`);

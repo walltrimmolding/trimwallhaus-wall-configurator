@@ -6,7 +6,7 @@ Wall Molding Calculator | TWH
 
 ## Short description
 
-Plan picture frame molding, board and batten, accent walls and wainscoting with spacing, cut lists and live kit pricing.
+Plan picture frames, French step corners, board and batten, accent walls and wainscoting with cut lists and live kit pricing.
 
 ## Detailed description
 
@@ -14,9 +14,10 @@ Plan a balanced wall molding layout before you order materials or make a cut.
 
 Wall Molding Calculator by Trim Wall Haus turns your wall dimensions into a proportional drawing, equal spacing, material estimate and practical cut list. Choose the design style that fits your room, enter the measurements and review the result immediately.
 
-Choose from four calculators:
+Choose from five calculators:
 
 - Picture frame molding calculator for balanced decorative wall frames
+- French step-corner calculator for outer and inner frames with 10 cm L-shaped corner details
 - Board and batten calculator for even batten spacing and panel counts
 - Accent wall calculator for square or rectangular grid layouts
 - Wainscoting calculator for lower-wall panels and chair rail placement
@@ -32,6 +33,8 @@ Key features:
 - Measurements saved locally on your device
 - Optional free architectural drawing request
 - Direct access to 11 installation-ready wall molding collections
+
+Explore the matching Trim Wall Haus collections for Accent Wall Molding Kits, Arched Wall Molding Kits, Board and Batten Wall Kits, Chair Rail Molding, Decorative Wall Molding Kits, Half Wall Paneling Kits, MDF Wall Paneling Kits, Peel and Stick Wall Molding Kits, Picture Frame Molding Kits, Shaker Wall Paneling Kits and Wainscoting Kits. The complete Trim Wall Molding Kits collection is also available from the calculator header.
 
 The calculator is intended for project planning. Always verify the physical wall, corners, doors, windows, outlets and other obstructions before ordering or cutting material.
 
@@ -59,6 +62,7 @@ Use these phrases naturally in the fields above. Do not add a separate keyword l
 | --- | --- | --- |
 | Primary | wall molding calculator | Product name and opening paragraph |
 | Secondary | picture frame molding calculator | Calculator list |
+| Secondary | French wall molding calculator | Calculator list |
 | Secondary | board and batten calculator | Calculator list |
 | Secondary | wainscoting calculator | Calculator list |
 | Secondary | accent wall calculator | Calculator list |
@@ -94,9 +98,9 @@ Prepared filenames:
 
 - `icon-128.png`
 - `01-picture-frame-calculator.png`
+- `02-french-step-corner-calculator.png`
 - `02-board-and-batten-calculator.png`
 - `03-accent-wall-grid-calculator.png`
-- `04-wainscoting-calculator.png`
 - `05-cut-list-live-pricing.png`
 - `small-promo-440x280.png`
 - `marquee-1400x560.png`
@@ -106,5 +110,5 @@ Prepared filenames:
 - No isolated keyword dump in the public description.
 - Each target calculator phrase appears once in a feature context.
 - The primary phrase appears naturally, not repeatedly.
-- The 11 collection names appear inside the functioning product-navigation section, not as a store metadata list.
+- Every collection name appears once in a useful product-discovery context.
 - No ranking claims, anonymous testimonials or unsupported “best/#1” language.

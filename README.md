@@ -11,6 +11,7 @@ Browse pre-cut molding kits and installation-ready wall designs at **[Trim Wall 
 ## Included calculators
 
 - **[Picture Frame Molding Kits](https://trimwallhaus.com/collections/picture-frame-molding-kits)** — calculate balanced decorative wall frames, panel dimensions, mitre cuts, and material requirements.
+- **[French Step Corner Picture Frame Kit](https://trimwallhaus.com/products/french-step-corner-picture-frame-wall-molding-kit-pre-cut-mdf)** — calculate outer and inner panels with four 10 cm L-shaped corner steps per frame.
 - **[Board and Batten Wall Kits](https://trimwallhaus.com/collections/board-and-batten-kits)** — calculate batten spacing, panel count, top rail length, and matching kit sizes.
 - **[Accent Wall Kits](https://trimwallhaus.com/collections/accent-wall-kits)** — plan full-height square and rectangular grid accent walls with an instant cut list.
 - **[Wainscoting Wall Molding Kits](https://trimwallhaus.com/collections/premium-wainscoting-wall-molding-kits)** — calculate lower-wall panel proportions, chair rail length, and recommended wainscoting height.
@@ -37,6 +38,7 @@ These calculators help homeowners and installers plan wall molding projects befo
 - Proportional SVG wall preview
 - Inch and centimetre measurements
 - Equal-spacing calculations
+- French step-corner geometry with adjustable L-corner depth
 - Material total with waste allowance
 - Printable cut list and PDF workflow
 - Live Trim Wall Haus Shopify product pricing

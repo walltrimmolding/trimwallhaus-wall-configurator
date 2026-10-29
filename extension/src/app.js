@@ -110,6 +110,9 @@ function metricItems(result) {
   if (result.type === 'picture-frame') return [
     ['Frame width', result.frameWidth], ['Frame height', result.frameHeight], ['Miter cuts', result.mitreCuts, ''], ['Stock pieces', result.stockPieces, ''],
   ];
+  if (result.type === 'french-step-corner') return [
+    ['Outer width', result.outerWidth], ['Inner width', result.innerWidth], ['L step', result.stepSize], ['Stock pieces', result.stockPieces, ''],
+  ];
   if (result.type === 'board-batten') return [
     ['Clear gap', result.gap], ['Vertical battens', result.battenCount, ''], ['Panels', result.panelCount, ''], ['Stock pieces', result.stockPieces, ''],
   ];
@@ -141,7 +144,7 @@ async function renderPrice(result) {
   priceHeading.textContent = 'Checking live Trim Wall Haus pricing...';
   priceDetail.textContent = 'Prices are read from the live store. We never invent unavailable prices.';
   shopButton.textContent = 'Shop this layout';
-  shopButton.href = buildShopUrl({ collection: config.collection, campaign: config.campaign });
+  shopButton.href = buildShopUrl({ collection: config.collection, product: config.shopProduct, campaign: config.campaign });
   try {
     const product = await loadProduct(config.productHandle);
     if (state.mode !== modeAtRequest) return;
@@ -155,7 +158,7 @@ async function renderPrice(result) {
     priceDetail.textContent = quantity ? `Live store match for ${quantity} ${state.mode === 'board-batten' ? 'set(s)' : 'panel(s)'}. Final price depends on profile and installation type.` : 'Live price range for the recommended product. Final price depends on selected profile.';
     const discount = discountForPrice(range.min);
     shopButton.textContent = discount ? 'Get $20 off and shop this layout' : 'Shop this layout';
-    shopButton.href = buildShopUrl({ collection: config.collection, campaign: config.campaign, code: discount });
+    shopButton.href = buildShopUrl({ collection: config.collection, product: config.shopProduct, campaign: config.campaign, code: discount });
   } catch (error) {
     state.product = null;
     state.price = null;

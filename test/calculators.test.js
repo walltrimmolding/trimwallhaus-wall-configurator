@@ -37,6 +37,21 @@ test('calculates picture frame dimensions and four mitres per frame', async () =
   assert.equal(result?.stockPieces, 8);
 });
 
+test('calculates French step-corner outer and inner frames with 10 cm L returns', async () => {
+  const { calculateFrenchStepCorner } = await load();
+  const result = calculateFrenchStepCorner?.({ wallWidth: 120, regionHeight: 84, panels: 3, sideMargin: 6, gap: 4, topMargin: 6, bottomMargin: 6, stepSize: 3.937, wastePercent: 10, stockLength: 96 });
+  assert.equal(result?.outerWidth, 33.333);
+  assert.equal(result?.outerHeight, 72);
+  assert.equal(result?.innerWidth, 25.459);
+  assert.equal(result?.innerHeight, 64.126);
+  assert.equal(result?.cornerModules, 12);
+  assert.equal(result?.cuts?.at(-1)?.label, 'French L-corner legs');
+  assert.equal(result?.cuts?.at(-1)?.quantity, 24);
+  assert.equal(result?.cuts?.at(-1)?.length, 3.937);
+  assert.equal(result?.rawLength, 1264);
+  assert.equal(result?.stockPieces, 15);
+});
+
 test('calculates accent wall grid cell size and total trim length', async () => {
   const { calculateAccentGrid } = await load();
   const result = calculateAccentGrid?.({ wallWidth: 120, wallHeight: 96, columns: 4, rows: 3, battenWidth: 2, wastePercent: 10, stockLength: 96 });

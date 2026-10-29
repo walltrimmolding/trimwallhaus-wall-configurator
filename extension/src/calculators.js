@@ -103,6 +103,53 @@ export function calculatePictureFrame(input) {
   };
 }
 
+export function calculateFrenchStepCorner(input) {
+  const wallWidth = positive('Wall width', input.wallWidth);
+  const regionHeight = positive('Design height', input.regionHeight);
+  const panels = whole('Panel count', input.panels);
+  const sideMargin = Math.max(0, Number(input.sideMargin) || 0);
+  const gap = Math.max(0, Number(input.gap) || 0);
+  const topMargin = Math.max(0, Number(input.topMargin) || 0);
+  const bottomMargin = Math.max(0, Number(input.bottomMargin) || 0);
+  const stepSize = positive('L-corner step', input.stepSize);
+  const outerWidth = (wallWidth - 2 * sideMargin - (panels - 1) * gap) / panels;
+  const outerHeight = regionHeight - topMargin - bottomMargin;
+  const innerWidth = outerWidth - 2 * stepSize;
+  const innerHeight = outerHeight - 2 * stepSize;
+  if (outerWidth <= 0 || outerHeight <= 0 || innerWidth <= 0 || innerHeight <= 0) {
+    throw new RangeError('The requested French step-corner layout does not fit this wall.');
+  }
+  const outerPerimeter = 2 * (outerWidth + outerHeight);
+  const innerPerimeter = 2 * (innerWidth + innerHeight);
+  const returnLength = 8 * stepSize;
+  const rawLength = panels * (outerPerimeter + innerPerimeter + returnLength);
+  return {
+    type: 'french-step-corner',
+    wallWidth,
+    wallHeight: regionHeight,
+    panels,
+    outerWidth: round(outerWidth),
+    outerHeight: round(outerHeight),
+    innerWidth: round(innerWidth),
+    innerHeight: round(innerHeight),
+    sideMargin,
+    gap,
+    topMargin,
+    bottomMargin,
+    stepSize: round(stepSize),
+    cornerModules: panels * 4,
+    mitreCuts: panels * 8,
+    cuts: [
+      { label: 'Outer horizontal pieces', quantity: panels * 2, length: round(outerWidth) },
+      { label: 'Outer vertical pieces', quantity: panels * 2, length: round(outerHeight) },
+      { label: 'Inner horizontal pieces', quantity: panels * 2, length: round(innerWidth) },
+      { label: 'Inner vertical pieces', quantity: panels * 2, length: round(innerHeight) },
+      { label: 'French L-corner legs', quantity: panels * 8, length: round(stepSize) },
+    ],
+    ...material(rawLength, input.wastePercent, input.stockLength),
+  };
+}
+
 export function calculateAccentGrid(input) {
   const wallWidth = positive('Wall width', input.wallWidth);
   const wallHeight = positive('Wall height', input.wallHeight);

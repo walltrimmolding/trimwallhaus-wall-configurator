@@ -53,6 +53,12 @@ test('builds tracked discount URL and shows WALL20 only at threshold', async () 
   assert.match(decodeURIComponent(url || ''), /utm_campaign=board-batten/);
 });
 
+test('builds a tracked direct product URL for the French step-corner kit', async () => {
+  const { buildShopUrl } = await load();
+  const url = buildShopUrl?.({ product: 'french-step-corner-picture-frame-wall-molding-kit-pre-cut-mdf', campaign: 'french-step-corner-calculator' });
+  assert.equal(url, 'https://trimwallhaus.com/products/french-step-corner-picture-frame-wall-molding-kit-pre-cut-mdf?utm_source=calculator&utm_medium=tool&utm_campaign=french-step-corner-calculator');
+});
+
 test('caches a live product request so measurement changes do not hammer Shopify', async () => {
   const { createProductLoader } = await load();
   let calls = 0;
