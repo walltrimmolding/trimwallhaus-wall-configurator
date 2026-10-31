@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171915">
+  <title>Free Home Project Calculators | Trim Wall Haus</title>
+  <meta name="description" content="Free stair, paint, wall square footage, wallpaper and baseboard calculators with transparent formulas and printable planning results.">
+  <link rel="stylesheet" href="./utility.css">
+</head>
+<body>
+  <header class="utility-header">
+    <a href="https://trimwallhaus.com/?utm_source=calculator&utm_medium=tool&utm_campaign=home-project-calculators" target="_blank" rel="noopener">Trim Wall Haus</a>
+    <a href="./index.html">Wall molding tools</a>
+    <div class="unit-switch" role="group" aria-label="Measurement unit">
+      <button type="button" data-unit="in" aria-pressed="true">in</button>
+      <button type="button" data-unit="cm" aria-pressed="false">cm</button>
+    </div>
+  </header>
+  <main>
+    <section class="utility-hero">
+      <p class="eyebrow">Free planning tools</p>
+      <h1 id="tool-title">Home project calculator</h1>
+      <p id="tool-description">Enter real measurements to produce a transparent planning estimate.</p>
+    </section>
+    <nav class="tool-tabs" id="tool-tabs" aria-label="Calculator selection"></nav>
+    <section class="calculator-shell">
+      <form id="utility-form" novalidate>
+        <div class="field-grid" id="utility-fields"></div>
+        <p class="form-error" id="utility-error" role="alert" hidden></p>
+      </form>
+      <section class="result-panel" aria-live="polite">
+        <p class="eyebrow">Planning result</p>
+        <div class="result-grid" id="utility-results"></div>
+        <p class="method-note" id="method-note"></p>
+        <div class="result-actions">
+          <button type="button" id="print-result">Print or save PDF</button>
+          <a id="collection-cta" href="https://trimwallhaus.com/collections/wall-moulding-kits?utm_source=calculator&utm_medium=tool&utm_campaign=home-project-calculators" target="_blank" rel="noopener">Explore wall molding kits</a>
+        </div>
+      </section>
+    </section>
+    <aside class="safety-note">
+      <strong>Planning estimate:</strong> Verify field measurements, product coverage and local construction requirements before buying or building. Paint and wallpaper labels override default coverage assumptions.
+    </aside>
+  </main>
+  <footer>Free calculator by <a href="https://trimwallhaus.com/" target="_blank" rel="noopener">Trim Wall Haus</a>.</footer>
+  <script type="module" src="./src/utility-app.js"></script>
+</body>
+</html>
+
