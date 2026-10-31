@@ -1,0 +1,9 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://trimwallhaus.com; frame-ancestors 'self' https://2interior-design.com https://www.2interior-design.com https://vincentinteriorblog.com https://www.vincentinteriorblog.com https://sites.google.com
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Resource-Policy: cross-origin
+
+/src/*
+  Cache-Control: public, max-age=3600

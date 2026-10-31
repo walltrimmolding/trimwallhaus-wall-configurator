@@ -183,3 +183,20 @@ footer a { color: inherit; text-underline-offset: 3px; }
   .workspace, .output-grid { display: block; border: 0; }
   .preview-panel, .output-card { break-inside: avoid; border: 0; }
 }
+
+html[data-embed="true"] .site-header,
+html[data-embed="true"] .hero,
+html[data-embed="true"] .collection-section,
+html[data-embed="true"] footer {
+  display: none;
+}
+
+html[data-embed="true"] main {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+html[data-embed="true"] .mode-section {
+  margin-top: 0;
+}

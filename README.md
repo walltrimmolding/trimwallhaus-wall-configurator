@@ -4,7 +4,7 @@ A browser-based wall molding planner for balanced layouts, material estimates, c
 
 ## Live calculator
 
-**[Open the free Wall Molding Configurator](https://trimwallhaus-wall-configurator.idealcamel10.chatgpt.site)**
+**[Open the free Wall Molding Configurator](https://trimwallhaus-tools.pages.dev/)**
 
 Browse pre-cut molding kits and installation-ready wall designs at **[Trim Wall Haus](https://trimwallhaus.com/)**.
 
@@ -46,6 +46,18 @@ These calculators help homeowners and installers plan wall molding projects befo
 - Local measurement saving
 - Free architectural drawing request through the store contact form
 - Chrome Manifest V3 extension bundle
+
+## Additional planning calculators
+
+The Cloudflare Pages build also publishes standalone, embeddable landing pages for:
+
+- Stair riser and tread planning
+- Room paint gallons and liters
+- Wall square footage
+- Wallpaper strips and rolls
+- Baseboard and trim length
+
+Each page includes a transparent formula, worked example, reference table, FAQ schema, an iframe-safe calculator and a printable result. Run `npm run build` to generate the production package in `dist/`.
 
 ## Run locally
 

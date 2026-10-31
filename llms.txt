@@ -1,0 +1,30 @@
+# Trim Wall Haus Free Calculators
+
+> Transparent planning calculators for wall molding layouts, stairs, paint, wall area, wallpaper and baseboard material. Each result is an estimate and should be checked against field measurements, product labels and local requirements.
+
+## Wall molding tools
+
+- [Wall Molding Configurator](https://trimwallhaus-tools.pages.dev/): Picture frame molding, French step corners, board and batten, accent grid and wainscoting layouts with SVG previews and cut lists.
+- [Picture Frame Molding Calculator](https://trimwallhaus-tools.pages.dev/tools/picture-frame-molding-calculator/): Equal frame widths, margins, gaps, perimeter and miter count.
+- [Board and Batten Calculator](https://trimwallhaus-tools.pages.dev/tools/board-and-batten-calculator/): Batten count, clear spacing, material length and cut list.
+- [Wainscoting Calculator](https://trimwallhaus-tools.pages.dev/tools/wainscoting-calculator/): One-third wall height planning, panel width and chair rail length.
+- [Accent Wall Grid Calculator](https://trimwallhaus-tools.pages.dev/tools/accent-wall-calculator/): Grid cell dimensions and total trim length.
+- [Baseboard Calculator](https://trimwallhaus-tools.pages.dev/tools/baseboard-calculator/): Net perimeter, waste and stock piece count.
+
+## Home project tools
+
+- [Stair Calculator](https://trimwallhaus-tools.pages.dev/tools/stair-calculator/): Riser count, actual riser height, tread count and total run.
+- [Paint Calculator](https://trimwallhaus-tools.pages.dev/tools/paint-calculator/): Paintable area, coats, gallons and liters.
+- [Wall Square Footage Calculator](https://trimwallhaus-tools.pages.dev/tools/wall-square-footage-calculator/): Gross area, openings, net area and material allowance.
+- [Wallpaper Calculator](https://trimwallhaus-tools.pages.dev/tools/wallpaper-calculator/): Strips, pattern-repeat adjustment and roll count.
+
+## Brand and products
+
+- [Trim Wall Haus](https://trimwallhaus.com/): Pre-cut wall molding and wall paneling kits.
+- [Wall Molding Kits](https://trimwallhaus.com/collections/wall-moulding-kits): Main product collection.
+
+## Method notes
+
+- Units can be entered in inches or centimeters.
+- Calculations run in the browser and measurement projects stay on the visitor's device unless a contact form is deliberately submitted.
+- Live product price requests, where available, are read from Trim Wall Haus rather than invented.

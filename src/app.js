@@ -20,6 +20,8 @@ const leadStatus = document.querySelector('#lead-status');
 const loadProduct = createProductLoader();
 
 const queryMode = new URLSearchParams(location.search).get('design');
+const isEmbedded = new URLSearchParams(location.search).get('embed') === '1';
+if (isEmbedded) document.documentElement.dataset.embed = 'true';
 const restored = readSaved();
 let state = {
   mode: MODES[queryMode] ? queryMode : (restored?.mode && MODES[restored.mode] ? restored.mode : 'picture-frame'),
@@ -177,10 +179,17 @@ function calculateAndRender() {
     renderResult(result);
     renderPrice(result);
     track('calc_complete', { calc_type: state.mode, material_inches: result.materialLength });
+    requestAnimationFrame(reportHeight);
   } catch (error) {
     state.result = null;
     formError.textContent = error.message;
     formError.hidden = false;
+  }
+}
+
+function reportHeight() {
+  if (window.parent !== window) {
+    window.parent.postMessage({ type: 'twh-calculator-height', height: document.documentElement.scrollHeight }, '*');
   }
 }
 
@@ -233,3 +242,4 @@ shopButton.addEventListener('click', () => track('coupon_click', { code: shopBut
 renderModes();
 renderFields();
 calculateAndRender();
+window.addEventListener('resize', reportHeight);
